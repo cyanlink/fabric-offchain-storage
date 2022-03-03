@@ -1,0 +1,18 @@
+syntax = "proto3";
+package api;
+
+service DataReceiver{
+  rpc SubmitRawData(Packet) returns (SubmitResponse);
+}
+
+message SubmitResponse{
+
+}
+
+message Packet {
+  RawData raw_data = 1;
+}
+
+message RawData{
+  bytes data_bytes = 1;
+}

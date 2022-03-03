@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package query;
+import "api/api.proto";
+
+service QueryProcessor{
+  rpc QueryData(QueryRequest) returns (QueryResponse);
+}
+
+message QueryRequest {
+  bytes identifier = 1;
+}
+
+message QueryResponse{
+
+}
