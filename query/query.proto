@@ -1,7 +1,7 @@
 syntax = "proto3";
+option go_package = "github.com/cyanlink/fabric-offchain-storage/query";
 
-package query;
-import "api/api.proto";
+package api;
 
 service QueryProcessor{
   rpc QueryData(QueryRequest) returns (QueryResponse);
