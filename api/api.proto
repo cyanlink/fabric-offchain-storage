@@ -3,18 +3,17 @@ package api;
 
 option go_package = "github.com/cyanlink/fabric-offchain-storage/api";
 
-service DataReceiver{
-  rpc SubmitRawData(Packet) returns (SubmitResponse);
-}
-
-message SubmitResponse{
+service OffchainDataReceiver{
 
 }
 
-message Packet {
-  RawData raw_data = 1;
+message StoreDataMsg {
+  string owner = 1;
+  string identifier = 2;
+  RawDataBundle rawDataBundle = 3   ;
+  uint64 timestamp = 4;
 }
 
-message RawData{
-  bytes data_bytes = 1;
+message RawDataBundle {
+
 }
